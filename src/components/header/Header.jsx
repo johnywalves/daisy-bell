@@ -1,13 +1,15 @@
 import React from "react";
+// components
+import AccessUser from "components/accessUser/AccessUser";
+import SearchInput from "components/searchInput/SearchInput";
 // styled
 import * as S from "./Header.styled";
 
 const Header = () => {
     return <S.Main>
         <S.Logo href="/"><p>Daisy Bell</p></S.Logo>
-        <S.Nav></S.Nav>
-        <S.Search></S.Search>
-        <S.Access></S.Access>
+        <SearchInput />
+        <AccessUser />
     </S.Main>
 }
 

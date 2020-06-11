@@ -32,6 +32,7 @@ const Home = () => {
         </S.ContentPiece>
       </S.Content>
       <S.Content>
+        <h1>Vide electram sadipscing et per</h1>
         <S.Categories>
           <Category name="Disputationi" />
           <Category name="Admodum" />

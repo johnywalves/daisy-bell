@@ -10,7 +10,12 @@ const LayoutInstitucional = ({ children }) => {
         <S.Wrapper>
             <Header />
             {children}
-            <S.Institucional />
+            <S.Institucional>
+                <S.Column>
+                    <h1>Product</h1>
+                    <a href="/aboutus"><p>About Us</p></a>
+                </S.Column>
+            </S.Institucional>
         </S.Wrapper>
         <S.Footer>
             <S.FooterLogo>

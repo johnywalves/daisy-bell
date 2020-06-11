@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Main = styled.div`
     position: relative;
-    margin-top: 5rem;
+    margin-top: 5.2rem;
+    min-height: calc(100vh - 5.2rem);
 `
 
 export const Wrapper = styled.div`
@@ -10,8 +11,19 @@ export const Wrapper = styled.div`
 `
 
 export const Institucional = styled.div`
+    display: flex;
     height: 20rem;
+    padding: 1.5rem 4rem;
     background-color: var(--bgDetail);
+`
+
+export const Column = styled.div`
+    margin: 2rem;
+    
+    & h1 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
 `
 
 export const Footer = styled.div`

@@ -29,11 +29,17 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         --text: #2e2e2e;
+        --textClean: #ffffff;
         --textLink: #d23669;
+        --textSelected: #108fe3;
         --textVisited: #ffa7c4;
+
         --boxShadow: #3b3b3b55;
-        --bgDefault: #f3f3f3;
+
+        --bgDefault: #ffffff;
+        --bgContent: #e3e3e3;
         --bgDetail: #d3d3d3;
+        --bgInput: #f3f3f3;
 
         color: var(--text);
         line-height: 1;

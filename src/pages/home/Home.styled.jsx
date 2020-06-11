@@ -39,6 +39,10 @@ export const Categories = styled.div`
     display: flex;
     padding: 1rem;
     overflow-y: auto;
+
+    & a:not(:last-child) {
+        margin-right: 1rem;
+    } 
 `
 
 export const Section = styled.article`
