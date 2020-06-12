@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // components
 import LayoutProduct from "components/layoutProduct/LayoutProduct";
 import SearchInput from "components/searchInput/SearchInput";
@@ -27,25 +28,24 @@ const Search = () => {
       <S.Results>
         <SearchInput large={true} />
         <S.ListResult>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
-          <a href="article"><S.ListItem /></a>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
+          <Link to="article"><S.ListItem /></Link>
         </S.ListResult>
       </S.Results>
     </S.Main>

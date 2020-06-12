@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 // components
 import Header from "components/header/Header";
 // styled
@@ -13,17 +14,17 @@ const LayoutInstitucional = ({ children }) => {
             <S.Institucional>
                 <S.Column>
                     <h1>Product</h1>
-                    <a href="/aboutus"><p>About Us</p></a>
+                    <Link to="/aboutus"><p>About Us</p></Link>
                 </S.Column>
             </S.Institucional>
         </S.Wrapper>
         <S.Footer>
             <S.FooterLogo>
-                <a href="/"><p>Daisy Bell</p></a>
+                <Link to="/"><p>Daisy Bell</p></Link>
             </S.FooterLogo>
             <S.FooterLegal>
-                <a href="/terms"><p>Terms of Use</p></a>
-                <a href="/privacy"><p>Policy Privacy</p></a>
+                <Link to="/terms"><p>Terms of Use</p></Link>
+                <Link to="/privacy"><p>Policy Privacy</p></Link>
             </S.FooterLegal>
         </S.Footer>
     </S.Main>

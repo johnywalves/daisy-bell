@@ -1,23 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 // pages
-import Home from 'pages/home/Home';
-import AboutUs from 'pages/aboutUs/AboutUs';
-import Categories from 'pages/categories/Categories';
-import Article from 'pages/article/Article';
-import Search from 'pages/search/Search';
-import Terms from 'pages/terms/Terms';
-import Privacy from 'pages/privacy/Privacy';
+import Home from "pages/home/Home";
+import AboutUs from "pages/aboutUs/AboutUs";
+import Categories from "pages/categories/Categories";
+import Article from "pages/article/Article";
+import Search from "pages/search/Search";
+import Terms from "pages/terms/Terms";
+import Privacy from "pages/privacy/Privacy";
+// components
+import ScrollToTop from "components/scrollToTop/ScrollToTop";
 // styles
-import GlobalStyles from 'styles/GlobalStyles';
+import GlobalStyles from "styles/GlobalStyles";
 // services
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <Router>
+    <HashRouter>
+      <ScrollToTop />
       <Switch>
         <Route path="/search" children={<Search />} />
         <Route path="/categories" children={<Categories />} />
@@ -27,9 +30,9 @@ ReactDOM.render(
         <Route path="/article" children={<Article />} />
         <Route path="/" children={<Home />} />
       </Switch>
-    </Router>
+    </HashRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

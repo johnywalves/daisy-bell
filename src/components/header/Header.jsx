@@ -7,7 +7,7 @@ import * as S from "./Header.styled";
 
 const Header = () => {
     return <S.Main>
-        <S.Logo href="/"><p>Daisy Bell</p></S.Logo>
+        <S.Logo to="/"><p>Daisy Bell</p></S.Logo>
         <SearchInput />
         <AccessUser />
     </S.Main>

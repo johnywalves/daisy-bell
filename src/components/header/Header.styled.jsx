@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Main = styled.div`
     position: fixed;
@@ -14,7 +15,7 @@ export const Main = styled.div`
     background-color: var(--bgDefault);
 `
 
-export const Logo = styled.a`
+export const Logo = styled(Link)`
     font-size: 2rem;
     font-weight: 700;
 `

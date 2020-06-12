@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // styles 
 import * as S from "./AccessUser.styled";
 
 const AccessUser = () => {
     return <S.Main>
-        <a href="/"><p>Log In</p></a>
-        <a href="/"><p>Sign up</p></a>
+        <Link to="/"><p>Log In</p></Link>
+        <Link to="/"><p>Sign up</p></Link>
     </S.Main>
 }
 

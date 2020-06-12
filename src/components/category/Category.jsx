@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 // styled
 import * as S from "./Category.styled";
 
 const Category = ({ name, search }) => {
-    return <a href={search ? "/categories" : "/search"}>
+    return <Link to={search ? "/categories" : "/search"}>
         <S.Main>
             {name}
         </S.Main>
-    </a>
+    </Link>
 }
 
 Category.defaultProps = {
