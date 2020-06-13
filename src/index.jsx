@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 // components
+import Loading from "components/loading/Loading";
 import ScrollToTop from "components/scrollToTop/ScrollToTop";
 // styles
 import GlobalStyles from "styles/GlobalStyles";
@@ -22,7 +23,7 @@ ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <ScrollToTop />
         <Switch>
           <Route exact path="/" component={Home} />
