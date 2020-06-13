@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-// styled
+// style
 import * as S from "./Category.styled";
 
-const Category = ({ name, search }) => {
-    return <Link to={search ? "/categories" : "/search"}>
+const Category = ({ name, selected }) => {
+    return <Link to={selected ? "/categories" : `/search/${name}`}>
         <S.Main>
             {name}
         </S.Main>
@@ -13,12 +13,12 @@ const Category = ({ name, search }) => {
 }
 
 Category.defaultProps = {
-    search: false,
+    selected: false,
 };
 
 Category.propTypes = {
     name: PropTypes.string.isRequired,
-    search: PropTypes.bool
+    selected: PropTypes.bool
 }
 
 export default Category;

@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 // components
 import Header from "components/header/Header";
-// styled
-import * as S from "./LayoutProduct.styled";
+// style
+import * as Layout from "styles/Layout.styled";
 
 const LayoutProduct = ({ children }) => {
-    return <S.Main>
+    return <Layout.Main>
         <Header />
         {children}
-    </S.Main>
+    </Layout.Main>
 }
 
 LayoutProduct.propTypes = {

@@ -1,15 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-// styled
-import * as S from "./SearchInput.styled";
+// components
+import InputText from "components/inputText/InputText";
 // assets
 import Icons from "assets/Icons";
 
-const SearchInput = ({ large }) => {
-    return <S.Search large={large}>
-        <S.SearchIcon large={large} children={<Icons.search />} />
-        <S.SearchText large={large} type="text" placeholder="Suco de cevadiss deixa as pessoas mais interessantis" />
-    </S.Search>
+const SearchInput = ({ large, ...rest }) => {
+    return <InputText
+        large={large}
+        icon={<Icons.search />}
+        placeholder="Suco de cevadiss deixa as pessoas mais interessantis"
+        {...rest}
+    />
 }
 
 SearchInput.defaultProps = {

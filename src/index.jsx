@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 // pages
 import Home from "pages/home/Home";
 import AboutUs from "pages/aboutUs/AboutUs";
@@ -8,6 +8,8 @@ import Categories from "pages/categories/Categories";
 import Article from "pages/article/Article";
 import Search from "pages/search/Search";
 import Terms from "pages/terms/Terms";
+import Login from "pages/login/Login";
+import SignUp from "pages/signUp/SignUp";
 import Privacy from "pages/privacy/Privacy";
 // components
 import ScrollToTop from "components/scrollToTop/ScrollToTop";
@@ -19,18 +21,20 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <Switch>
-        <Route path="/search" children={<Search />} />
-        <Route path="/categories" children={<Categories />} />
-        <Route path="/aboutus" children={<AboutUs />} />
-        <Route path="/terms" children={<Terms />} />
-        <Route path="/privacy" children={<Privacy />} />
-        <Route path="/article" children={<Article />} />
-        <Route path="/" children={<Home />} />
+        <Route path="/search/:category" component={Search} />
+        <Route path="/categories" component={Categories} />
+        <Route path="/aboutus" component={AboutUs} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/terms" component={Terms} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/article" component={Article} />
+        <Route path="/" component={Home} />
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

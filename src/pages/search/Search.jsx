@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 // components
 import LayoutProduct from "components/layoutProduct/LayoutProduct";
 import SearchInput from "components/searchInput/SearchInput";
@@ -9,10 +9,13 @@ import SearchItem from "components/searchItem/SearchItem";
 import * as S from "./Search.styled";
 
 const Search = () => {
+
+  const { category } = useParams();
+
   return <LayoutProduct>
     <S.Main>
       <S.Sidebar>
-        <Category name="Disputationi" search={true} />
+        <Category selected name={category} />
         <h1>Elementum</h1>
         <SearchItem name="Deprimidis" />
         <SearchItem name="Mé faiz elementum" />
@@ -26,7 +29,7 @@ const Search = () => {
         <SearchItem name="Quem" />
       </S.Sidebar>
       <S.Results>
-        <SearchInput large={true} />
+        <SearchInput large />
         <S.ListResult>
           <Link to="article"><S.ListItem /></Link>
           <Link to="article"><S.ListItem /></Link>

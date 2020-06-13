@@ -2,10 +2,11 @@ import React from "react";
 // components
 import LayoutInstitucional from "components/layoutInstitucional/LayoutInstitucional";
 import Category from "components/category/Category";
-// styled
+// style
 import * as S from "./Home.styled";
 // assets
 import Icons from "assets/Icons";
+import categories from "assets/categories.json";
 
 const Home = () => {
   return (
@@ -34,18 +35,7 @@ const Home = () => {
       <S.Content>
         <h1>Vide electram sadipscing et per</h1>
         <S.Categories>
-          <Category name="Disputationi" />
-          <Category name="Admodum" />
-          <Category name="Deprimidis" />
-          <Category name="Electram" />
-          <Category name="Sadipscing" />
-          <Category name="Tratores" />
-          <Category name="Disputationi" />
-          <Category name="Admodum" />
-          <Category name="Deprimidis" />
-          <Category name="Electram" />
-          <Category name="Sadipscing" />
-          <Category name="Tratores" />
+          {categories.map(c => <Category {...c} />)}
         </S.Categories>
       </S.Content>
       <S.Section className="left">

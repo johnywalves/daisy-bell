@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// styled
+// style
 import * as S from "./Content.styled";
 
 const Content = ({ title, subtitle, children }) => {

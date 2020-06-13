@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-export const Main = styled.div`
-`
-
 export const Content = styled.div`
     width: calc(100% - 8rem);
     padding: 1.5rem 4rem;
@@ -17,6 +14,7 @@ export const Content = styled.div`
         font-size: 3rem;
         font-weight: 700;
         text-align: center;
+        margin: 1rem 0;
     }
 `
 

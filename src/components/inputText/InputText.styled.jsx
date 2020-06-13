@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Search = styled.div`
+export const Box = styled.div`
     display: flex;
     padding: .5rem;
     border: 1px solid var(--boxShadow);
@@ -8,7 +8,7 @@ export const Search = styled.div`
     border-radius: .5rem;
 `
 
-export const SearchIcon = styled.div`
+export const Icon = styled.div`
     & svg {
         color: var(--boxShadow);
         height: ${props => props.large ? "1.5rem" : "1rem"};
@@ -16,7 +16,7 @@ export const SearchIcon = styled.div`
     }
 `
 
-export const SearchText = styled.input`
+export const Input = styled.input`
     appearance: none;
     border: none;
     width: ${props => props.large ? "100%" : "22rem"};

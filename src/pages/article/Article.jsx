@@ -1,7 +1,7 @@
 import React from "react";
 // components
 import LayoutProduct from "components/layoutProduct/LayoutProduct";
-// styled
+// style
 import * as S from "./Article.styled";
 
 const Article = () => {

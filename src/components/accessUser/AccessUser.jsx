@@ -5,8 +5,8 @@ import * as S from "./AccessUser.styled";
 
 const AccessUser = () => {
     return <S.Main>
-        <Link to="/"><p>Log In</p></Link>
-        <Link to="/"><p>Sign up</p></Link>
+        <Link to="/login"><p>Log In</p></Link>
+        <Link to="/signup"><p>Sign up</p></Link>
     </S.Main>
 }
 

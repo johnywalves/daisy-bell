@@ -20,32 +20,5 @@ export const Logo = styled(Link)`
     font-weight: 700;
 `
 
-export const Search = styled.div`
-    display: flex;
-    padding: .5rem;
-    border: 1px solid var(--boxShadow);
-    background-color: var(--bgInput);
-    border-radius: .5rem;
-`
-
-export const SearchIcon = styled.div`
-    & svg {
-        color: var(--boxShadow);
-        height: 1rem;
-        margin: 0 .5rem 0 .25rem;
-    }
-`
-
-export const SearchText = styled.input`
-    appearance: none;
-    border: none;
-    width: 22rem;
-    background-color: var(--bgInput);
-
-    &:focus {
-        outline: none;
-    }
-`
-
 export const Access = styled.div`
 `

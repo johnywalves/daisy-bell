@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 // components
 import Header from "components/header/Header";
-// styled
+// style
+import * as Layout from "styles/Layout.styled";
 import * as S from "./LayoutInstitucional.styled";
 
 const LayoutInstitucional = ({ children }) => {
-    return <S.Main>
+    return <Layout.Main>
         <S.Wrapper>
             <Header />
             {children}
@@ -27,7 +28,7 @@ const LayoutInstitucional = ({ children }) => {
                 <Link to="/privacy"><p>Policy Privacy</p></Link>
             </S.FooterLegal>
         </S.Footer>
-    </S.Main>
+    </Layout.Main>
 }
 
 LayoutInstitucional.propTypes = {

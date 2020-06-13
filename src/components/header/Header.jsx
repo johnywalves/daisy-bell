@@ -2,7 +2,7 @@ import React from "react";
 // components
 import AccessUser from "components/accessUser/AccessUser";
 import SearchInput from "components/searchInput/SearchInput";
-// styled
+// style
 import * as S from "./Header.styled";
 
 const Header = () => {
