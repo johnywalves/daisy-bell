@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 // style
 import * as S from "./Category.styled";
 
-const Category = ({ name, selected }) => {
-    return <Link to={selected ? "/categories" : `/search/${name}`}>
+const Category = ({ id, name, selected }) => {
+    return <Link to={selected ? "/categories" : `/${id}/search`}>
         <S.Main>
             {name}
         </S.Main>
@@ -17,6 +17,7 @@ Category.defaultProps = {
 };
 
 Category.propTypes = {
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     selected: PropTypes.bool
 }

@@ -5,9 +5,9 @@ import Header from "components/header/Header";
 // style
 import * as Layout from "styles/Layout.styled";
 
-const LayoutProduct = ({ children }) => {
+const LayoutProduct = ({ children, ...rest }) => {
     return <Layout.Main>
-        <Header />
+        <Header {...rest} />
         {children}
     </Layout.Main>
 }

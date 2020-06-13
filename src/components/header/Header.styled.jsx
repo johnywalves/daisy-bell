@@ -13,6 +13,7 @@ export const Main = styled.div`
 
     box-shadow: 0px 1px 5px 0px var(--boxShadow);
     background-color: var(--bgDefault);
+    z-index: 2;
 `
 
 export const Logo = styled(Link)`

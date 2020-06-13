@@ -1,31 +1,41 @@
 [{
+        "id": "disputationi",
         "name": "Disputationi"
     },
     {
+        "id": "admodum",
         "name": "Admodum"
     },
     {
+        "id": "deprimidis",
         "name": "Deprimidis"
     },
     {
+        "id": "electram",
         "name": "Electram"
     },
     {
+        "id": "sadipscing",
         "name": "Sadipscing"
     },
     {
+        "id": "tratores",
         "name": "Tratores"
     },
     {
+        "id": "maximus",
         "name": "Maximus"
     },
     {
+        "id": "aenean",
         "name": "Aenean"
     },
     {
+        "id": "pharetra",
         "name": "Pharetra"
     },
     {
+        "id": "commodo",
         "name": "Commodo"
     }
 ]

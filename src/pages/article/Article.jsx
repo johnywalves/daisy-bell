@@ -1,30 +1,32 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 // components
 import LayoutProduct from "components/layoutProduct/LayoutProduct";
+// actons
+import getArticle from "actions/getArticle";
 // style
 import * as S from "./Article.styled";
 
+const articleClean = { name: "...", content: "..." };
+
 const Article = () => {
-    return <LayoutProduct>
+
+    const { slug } = useParams();
+
+    const [article, setArticle] = useState(articleClean);
+
+    useEffect(() => slug ? getArticle(slug, setArticle) : setArticle(articleClean), [slug, setArticle]);
+
+    const createMarkup = useCallback(a => a.content ? { __html: a.content } : {}, []);
+    const styleFigure = useCallback(a => a.cover ? { backgroundImage: `url(${a.cover})` } : {}, []);
+
+    return <LayoutProduct title={article.name}>
         <S.Article className="right">
             <S.ArticleText>
-                <h1>Mussum Ipsum, cacilds vidis litro abertis</h1>
-                <p>Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. A ordem dos tratores não altera o pão duris. Diuretics paradis num copo é motivis de denguis.</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
-                <p>Quem num gosta di mé, boa gentis num é. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mim que vai caçá sua turmis!</p>
+                <h1>{article.name}</h1>
+                <div dangerouslySetInnerHTML={createMarkup(article)} />
             </S.ArticleText>
-            <S.ArticleFigure>
-            </S.ArticleFigure>
+            <S.ArticleFigure style={styleFigure(article)} />
         </S.Article>
     </LayoutProduct>
 }

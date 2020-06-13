@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import InputButton from "components/inputButton/InputButton";
 
 export const Content = styled.div`
     width: calc(100% - 8rem);
@@ -75,6 +76,37 @@ export const SectionFigure = styled.figure`
 `
 
 export const Fronthead = styled.div`
+    position: relative;
     height: 50vh;
     background-color: var(--boxShadow);
+
+    &.right {
+        text-align: right;
+    }
+
+    &.right p, &.right h1 {
+        right: 5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        position: absolute;
+        margin: 8vh 0 0 5rem;
+    }
+
+    p {
+        font-size: 2rem;
+        position: absolute;
+        margin: calc(10vh + 4rem) 0 0 5rem;
+        width: 50%;
+    }
+`
+
+export const SignUpButton = styled(InputButton)`
+    position: absolute;
+    top: calc(12vh + 8rem);
+    right: 5rem;
+    width: 10rem;
+    font-weight: 700;
 `

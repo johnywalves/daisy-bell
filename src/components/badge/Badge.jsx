@@ -12,7 +12,7 @@ const Badge = ({ children }) => {
 }
 
 Badge.propTypes = {
-    children: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Badge;
