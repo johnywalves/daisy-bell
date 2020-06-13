@@ -37,6 +37,11 @@ const Search = () => {
 
   useEffect(() => setObject(categories.find(c => c.id === category)), [category]);
 
+  const createMarkup = useCallback(() => {
+    const __html = `No results${object && ` for category <strong>${object.name}</strong>`}`;
+    return { __html };
+  }, [object]);
+
   useEffect(() => {
     const params = { setResult: setArticles }
     if (object && object.id) {
@@ -65,6 +70,7 @@ const Search = () => {
       }
       <S.Results>
         <SearchInput large />
+        <S.AlertResult visible={articles.length === 0} dangerouslySetInnerHTML={createMarkup()} />
         <S.ListResult>
           {articles.map(a => <ResultItem key={a.id} {...a} />)}
         </S.ListResult>

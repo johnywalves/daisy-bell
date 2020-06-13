@@ -67,7 +67,7 @@ const GlobalStyles = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
-
+    
     a {
         color: var(--text);
         cursor: pointer;
@@ -76,6 +76,10 @@ const GlobalStyles = createGlobalStyle`
 
     a:hover {
         color: var(--textLink);
+    }
+
+    strong {
+        font-weight: 700;        
     }
 `
 

@@ -23,11 +23,17 @@ export const Results = styled.div`
     padding: 2rem 1rem;
 `
 
+export const AlertResult = styled.p`
+    font-size: .9rem;
+    margin-top: .5rem;
+    visibility: ${props => props.visible ? "visible" : "hidden" }
+`
+
 export const ListResult = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 19.5%);
     grid-gap: 0.625%;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 `
 
 export const ListItem = styled.div`
