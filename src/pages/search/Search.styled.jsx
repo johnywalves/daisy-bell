@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LazyImage from "components/lazyImage/LazyImage";
 
 export const Main = styled.div`
     display: grid;
@@ -36,12 +37,9 @@ export const ListResult = styled.div`
     margin-top: 1rem;
 `
 
-export const ListItem = styled.div`
+export const ListItem = styled(LazyImage)`
     position: relative;
     height: 15rem;
-    background-color: var(--boxShadow);
-    background-size: cover;
-    background-position: center center;
     border-radius: .5rem;
     transition: transform .5s;
 

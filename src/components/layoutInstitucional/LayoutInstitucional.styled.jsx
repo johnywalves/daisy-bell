@@ -8,7 +8,7 @@ export const Institucional = styled.div`
     display: flex;
     height: 20rem;
     padding: 1.5rem 4rem;
-    background-color: var(--bgDetail);
+    background-color: var(--bgDefault);
 `
 
 export const Column = styled.div`
@@ -20,17 +20,25 @@ export const Column = styled.div`
     }
 `
 
-export const Footer = styled.div`
+export const WrapperFooter = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
     width: calc(100% - 8rem);
+`
+
+export const Footer = styled.div`
+    position: relative;
+    bottom: 0;
+    left: 4rem;
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 0;
 
     background-color: var(--bgDefault);
+    border-top: 1px solid var(--boxShadow);
 `
 
 export const FooterLogo = styled.div`

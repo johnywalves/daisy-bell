@@ -19,10 +19,8 @@ const ResultItem = ({ id, name, thumbnail }) => {
 
   const mouseOver = useCallback(collected ? () => true : () => { getArticle(id); setCollect(true); }, [setCollect, id, collected]);
 
-  const getStyle = useCallback(() => ({ backgroundImage: `url(${thumbnail})` }), [thumbnail]);
-
   return <Link to={`/${id}`}>
-    <S.ListItem style={getStyle()} onMouseOver={mouseOver} >
+    <S.ListItem src={thumbnail} onMouseOver={mouseOver} >
       <p>{name}</p>
     </S.ListItem>
   </Link>

@@ -22,15 +22,17 @@ const LayoutInstitucional = ({ children }) => {
                 </S.Column>
             </S.Institucional>
         </S.Wrapper>
-        <S.Footer>
-            <S.FooterLogo>
-                <Link to="/" onClick={goTop}><p>Daisy Bell</p></Link>
-            </S.FooterLogo>
-            <S.FooterLegal>
-                <Link to="/terms"><p>Terms of Use</p></Link>
-                <Link to="/privacy"><p>Policy Privacy</p></Link>
-            </S.FooterLegal>
-        </S.Footer>
+        <S.WrapperFooter>
+            <S.Footer>
+                <S.FooterLogo>
+                    <Link to="/" onClick={goTop}><p>Daisy Bell</p></Link>
+                </S.FooterLogo>
+                <S.FooterLegal>
+                    <Link to="/terms"><p>Terms of Use</p></Link>
+                    <Link to="/privacy"><p>Policy Privacy</p></Link>
+                </S.FooterLegal>
+            </S.Footer>
+        </S.WrapperFooter>
     </Layout.Main>
 }
 

@@ -1,41 +1,51 @@
 [{
         "id": "disputationi",
-        "name": "Disputationi"
+        "name": "Disputationi",
+        "cover": "/category/356d1f21-a8d7-4d90-919c-5e679f4fea9e-category.jpg"
     },
     {
         "id": "admodum",
-        "name": "Admodum"
+        "name": "Admodum",
+        "cover": "/category/71d13d2e-d830-48b9-bebb-7acf50f5f79e-category.jpg"
     },
     {
         "id": "deprimidis",
-        "name": "Deprimidis"
+        "name": "Deprimidis",
+        "cover": "/category/bd958c0c-0f8a-4ab9-8805-e30e5a62e314-category.jpg"
     },
     {
         "id": "electram",
-        "name": "Electram"
+        "name": "Electram",
+        "cover": "/category/5a32297f-3552-410b-b43d-5803300345b2-category.jpg"
     },
     {
         "id": "sadipscing",
-        "name": "Sadipscing"
+        "name": "Sadipscing",
+        "cover": "/category/91604e51-c4f9-4b77-b6d7-fc51ae6c0cf7-category.jpg"
     },
     {
         "id": "tratores",
-        "name": "Tratores"
+        "name": "Tratores",
+        "cover": "/category/bfafd253-acf8-44ab-bb24-a3d61f706d5b-category.jpg"
     },
     {
         "id": "maximus",
-        "name": "Maximus"
+        "name": "Maximus",
+        "cover": "/category/686c5f76-ce69-4455-9e50-8bb3ef6a6e9c-category.jpg"
     },
     {
         "id": "aenean",
-        "name": "Aenean"
+        "name": "Aenean",
+        "cover": "/category/9b61b68a-2477-41ce-b2bd-da895e3401de-category.jpg"
     },
     {
         "id": "pharetra",
-        "name": "Pharetra"
+        "name": "Pharetra",
+        "cover": "/category/f1461d84-3b37-47a2-ba1a-c63f83ed24a3-category.jpg"
     },
     {
         "id": "commodo",
-        "name": "Commodo"
+        "name": "Commodo",
+        "cover": "/category/71a93a32-b826-4307-b4cd-071612bf4d50-category.jpg"
     }
 ]

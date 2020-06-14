@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LazyImage from "components/lazyImage/LazyImage";
 
 export const Article = styled.article`
     display: flex;
@@ -27,10 +28,7 @@ export const ArticleText = styled.div`
     }
 `
 
-export const ArticleFigure = styled.figure`
+export const ArticleFigure = styled(LazyImage)`
     flex: 50% 0 0;
-    background-color: var(--boxShadow);
-    background-size: cover;
-    background-position: center center;
     height: calc(100vh - 5.2rem);
 `

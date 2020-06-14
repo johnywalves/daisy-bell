@@ -1,14 +1,22 @@
 import styled from "styled-components";
+import LazyImage from "components/lazyImage/LazyImage";
 
-export const Main = styled.div`
-    padding: 2rem;
-    border: 1px solid var(--text);
+export const Main = styled(LazyImage)`
+    color: var(--textClean);
     border-radius: .5rem;
 
-    &:hover {
-        color: var(--textClean);
-        border: 1px solid var(--textClean);
-        background-color: var(--textLink);
-        transition: border 1s, background-color 1s;
+    & p {
+        margin: 0 !important;
+        padding: 2rem 2.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px var(--boxShadow);
+
+        border-radius: .5rem;
+        backdrop-filter: blur(10px) saturate(25%);
+        transition: backdrop-filter .5s;
+    }
+
+    & p:hover {
+        backdrop-filter: none;
     }
 `

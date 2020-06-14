@@ -18,7 +18,6 @@ const Article = () => {
     useEffect(() => slug ? getArticle(slug, setArticle) : setArticle(articleClean), [slug, setArticle]);
 
     const createMarkup = useCallback(a => a.content ? { __html: a.content } : {}, []);
-    const styleFigure = useCallback(a => a.cover ? { backgroundImage: `url(${a.cover})` } : {}, []);
 
     return <LayoutProduct title={article.name}>
         <S.Article className="right">
@@ -26,7 +25,7 @@ const Article = () => {
                 <h1>{article.name}</h1>
                 <div dangerouslySetInnerHTML={createMarkup(article)} />
             </S.ArticleText>
-            <S.ArticleFigure style={styleFigure(article)} />
+            <S.ArticleFigure src={article.cover} />
         </S.Article>
     </LayoutProduct>
 }

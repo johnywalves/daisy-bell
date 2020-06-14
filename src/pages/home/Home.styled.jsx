@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import InputButton from "components/inputButton/InputButton";
+import LazyImage from "components/lazyImage/LazyImage";
 
 export const Content = styled.div`
     width: calc(100% - 8rem);
@@ -36,7 +37,7 @@ export const ContentPiece = styled.div`
 
 export const Categories = styled.div`
     display: flex;
-    padding: 1rem;
+    padding: 1rem 0;
     overflow-y: auto;
 
     & a:not(:last-child) {
@@ -70,12 +71,11 @@ export const SectionText = styled.div`
     }
 `
 
-export const SectionFigure = styled.figure`
+export const SectionFigure = styled(LazyImage)`
     flex: 50% 0 0;
-    background-color: var(--boxShadow);
 `
 
-export const Fronthead = styled.div`
+export const Fronthead = styled(LazyImage)`
     position: relative;
     height: 50vh;
     background-color: var(--boxShadow);
@@ -89,6 +89,8 @@ export const Fronthead = styled.div`
     }
 
     h1 {
+        color: var(--textClean);
+        text-shadow: 2px 2px var(--boxShadow);
         font-size: 4rem;
         font-weight: 700;
         position: absolute;
@@ -96,6 +98,8 @@ export const Fronthead = styled.div`
     }
 
     p {
+        color: var(--textClean);
+        text-shadow: 1px 1px var(--boxShadow);
         font-size: 2rem;
         position: absolute;
         margin: calc(10vh + 4rem) 0 0 5rem;

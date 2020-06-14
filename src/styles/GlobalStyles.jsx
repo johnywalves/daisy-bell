@@ -42,6 +42,7 @@ const GlobalStyles = createGlobalStyle`
         --bgInput: #f3f3f3;
         --bgInfoStart: #00000000;
         --bgInfoEnd: #000000;
+        --bgInfoFade: #00000055;
 
         color: var(--text);
         line-height: 1;
