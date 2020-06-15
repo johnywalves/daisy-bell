@@ -50,7 +50,7 @@ export const FooterLegal = styled.div`
     flex-direction: columns;
     justify-content: space-between;
 
-    & a:first-child {
+    & a:not(:last-child) {
         margin-right: 1rem;
     }
 `

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import LazyImage from "components/lazyImage/LazyImage";
 
 export const Main = styled.div`
@@ -35,6 +36,21 @@ export const ListResult = styled.div`
     grid-template-columns: repeat(5, 19.5%);
     grid-gap: 0.625%;
     margin-top: 1rem;
+
+    ${media.lessThan("large")`
+        grid-template-columns: repeat(4, 24%);
+        grid-gap: 1%;
+    `}
+
+    ${media.lessThan("medium")`
+        grid-template-columns: repeat(3, 32%);
+        grid-gap: 1%;
+    `}
+
+    ${media.lessThan("small")`
+        grid-template-columns: repeat(2, 49.5%);
+        grid-gap: 1%;
+    `}
 `
 
 export const ListItem = styled(LazyImage)`
