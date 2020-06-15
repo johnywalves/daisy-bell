@@ -79,38 +79,47 @@ export const Fronthead = styled(LazyImage)`
     position: relative;
     height: 50vh;
     background-color: var(--boxShadow);
+`
 
-    &.right {
+export const FrontheadPainel = styled.div`
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bgInfoFade);
+`
+
+export const FrontheadBox = styled.div`
+    position: relative;
+    color: var(--textClean);
+    padding: 5rem 0 0 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .right & {
         text-align: right;
+        padding: 5rem 5rem 0 0;
     }
 
-    &.right p, &.right h1 {
-        right: 5rem;
+    .right & p {
+        margin-left: 50%; 
     }
 
     h1 {
-        color: var(--textClean);
-        text-shadow: 2px 2px var(--boxShadow);
         font-size: 4rem;
         font-weight: 700;
-        position: absolute;
-        margin: 8vh 0 0 5rem;
+        text-shadow: 2px 2px var(--boxShadow);
+        margin-bottom: 1rem;
     }
 
     p {
-        color: var(--textClean);
-        text-shadow: 1px 1px var(--boxShadow);
-        font-size: 2rem;
-        position: absolute;
-        margin: calc(10vh + 4rem) 0 0 5rem;
         width: 50%;
+        font-size: 2rem;
+        text-shadow: 1px 1px var(--boxShadow);
+        margin-bottom: 1rem;
     }
 `
 
 export const SignUpButton = styled(InputButton)`
-    position: absolute;
-    top: calc(12vh + 8rem);
-    right: 5rem;
     width: 10rem;
     font-weight: 700;
 `

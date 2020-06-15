@@ -3,7 +3,7 @@ import React from "react";
 import Content from "components/content/Content";
 import LayoutInstitucional from "components/layoutInstitucional/LayoutInstitucional";
 
-const Privacy = () => {
+const AboutUs = () => {
   return <LayoutInstitucional>
     <Content title="About Us" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis nisi dui, ut finibus tellus imperdiet eu. Aliquam erat volutpat. Mauris sed congue elit">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis nisi dui, ut finibus tellus imperdiet eu. Aliquam erat volutpat. Mauris sed congue elit. Nullam aliquet ullamcorper eros, et dapibus ex fringilla at. Quisque consectetur molestie nunc, sit amet finibus nisi facilisis nec. Aliquam dapibus suscipit fermentum. Praesent pretium magna ligula, ut egestas nunc fringilla a. Donec et sapien sit amet erat pulvinar interdum gravida ut risus. Morbi porta metus sed arcu semper euismod. Vivamus gravida molestie lorem sit amet ornare.</p>
@@ -14,4 +14,4 @@ const Privacy = () => {
   </LayoutInstitucional>
 }
 
-export default Privacy;
+export default AboutUs;

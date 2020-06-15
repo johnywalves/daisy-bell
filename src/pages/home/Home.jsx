@@ -12,8 +12,12 @@ const Home = () => {
   return (
     <LayoutInstitucional>
       <S.Fronthead full src="/banner/71d13d2e-d830-48b9-bebb-7acf50f5f79e-banner.jpg">
-        <h1>Quisque ut dapibus</h1>
-        <p>Praesent eleifend, enim eu aliquam lobortis, mi urna vestibulum urna, eget accumsan magna ante nec elit</p>
+        <S.FrontheadPainel>
+          <S.FrontheadBox>
+            <h1>Quisque ut dapibus</h1>
+            <p>Praesent eleifend, enim eu aliquam lobortis, mi urna vestibulum urna, eget accumsan magna ante nec elit</p>
+          </S.FrontheadBox>
+        </S.FrontheadPainel>
       </S.Fronthead>
       <S.Content>
         <h1>Admodum accumsan</h1>
@@ -60,9 +64,13 @@ const Home = () => {
         <S.SectionFigure src="/banner/b47a9787-1b37-468a-a79d-dcb4bfa90416-banner.jpg" />
       </S.Section>
       <S.Fronthead full src="/banner/f1461d84-3b37-47a2-ba1a-c63f83ed24a3-banner.jpg" className="right">
-        <h1>Suspendisse tincidunt nibh</h1>
-        <p>Nulla at iaculis dolor. Vivamus ornare condimentum accumsan</p>
-        <S.SignUpButton to="/signup">Sign Up</S.SignUpButton>
+        <S.FrontheadPainel>
+          <S.FrontheadBox>
+            <h1>Suspendisse tincidunt nibh</h1>
+            <p>Nulla at iaculis dolor. Vivamus ornare condimentum accumsan</p>
+            <S.SignUpButton to="/signup">Sign Up</S.SignUpButton>
+          </S.FrontheadBox>
+        </S.FrontheadPainel>
       </S.Fronthead>
     </LayoutInstitucional>
   );

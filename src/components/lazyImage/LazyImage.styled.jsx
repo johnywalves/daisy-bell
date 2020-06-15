@@ -20,10 +20,4 @@ export const Main = styled.div`
     animation: pulse 2s infinite;
 `
 
-export const Painel = styled.div`
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: var(--bgInfoFade);
-`
 

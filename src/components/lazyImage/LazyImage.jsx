@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 // style
 import * as S from "./LazyImage.styled";
 
-const LazyImage = ({ children, src, full, ...rest }) => {
+const LazyImage = ({ children, src, ...rest }) => {
 
     const [style, setStyle] = useState({});
 
@@ -14,18 +14,12 @@ const LazyImage = ({ children, src, full, ...rest }) => {
     }, [setStyle, src])
 
     return <S.Main style={style} {...rest}>
-        {full && <S.Painel children={children} />}
-        {!full && children}
+        {children}
     </S.Main>
 }
 
-LazyImage.defaultProps = {
-    full: false,
-};
-
 LazyImage.propTypes = {
     children: PropTypes.node,
-    full: PropTypes.bool,
     src: PropTypes.string,
 };
 
