@@ -10,6 +10,7 @@ import GlobalStyles from "styles/GlobalStyles";
 import * as serviceWorker from "./serviceWorker";
 // pages
 const Home = lazy(() => import("pages/home/Home"));
+const Support = lazy(() => import("pages/support/Support"));
 const AboutUs = lazy(() => import("pages/aboutUs/AboutUs"));
 const Categories = lazy(() => import("pages/categories/Categories"));
 const Article = lazy(() => import("pages/article/Article"));
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/categories" component={Categories} />
+          <Route path="/support" component={Support} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />

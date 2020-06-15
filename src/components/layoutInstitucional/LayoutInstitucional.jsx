@@ -30,6 +30,7 @@ const LayoutInstitucional = ({ children }) => {
                 <S.FooterLegal>
                     <Link to="/terms"><p>Terms of Use</p></Link>
                     <Link to="/privacy"><p>Policy Privacy</p></Link>
+                    <Link to="/support"><p>Support</p></Link>
                 </S.FooterLegal>
             </S.Footer>
         </S.WrapperFooter>
