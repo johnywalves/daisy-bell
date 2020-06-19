@@ -19,4 +19,5 @@ export const Main = styled.div`
     font-size: 5rem;
     transform: translate(-50%, -50%);
     animation: pulse 2s infinite;
+    background-color: var(--bgDefault);
 `

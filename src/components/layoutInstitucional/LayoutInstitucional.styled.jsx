@@ -18,6 +18,10 @@ export const Column = styled.div`
         font-weight: 700;
         margin-bottom: 1rem;
     }
+
+    & p {
+        margin-bottom: .25rem;
+    }
 `
 
 export const WrapperFooter = styled.div`

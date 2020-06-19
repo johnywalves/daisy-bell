@@ -19,6 +19,7 @@ const LayoutInstitucional = ({ children }) => {
                 <S.Column>
                     <h1>Company</h1>
                     <Link to="/aboutus"><p>About Us</p></Link>
+                    <Link to="/credits"><p>Credits</p></Link>
                 </S.Column>
             </S.Institucional>
         </S.Wrapper>

@@ -12,6 +12,7 @@ import * as serviceWorker from "./serviceWorker";
 const Home = lazy(() => import("pages/home/Home"));
 const Support = lazy(() => import("pages/support/Support"));
 const AboutUs = lazy(() => import("pages/aboutUs/AboutUs"));
+const Credits = lazy(() => import("pages/credits/Credits"));
 const Categories = lazy(() => import("pages/categories/Categories"));
 const Article = lazy(() => import("pages/article/Article"));
 const Search = lazy(() => import("pages/search/Search"));
@@ -31,6 +32,7 @@ ReactDOM.render(
           <Route path="/categories" component={Categories} />
           <Route path="/support" component={Support} />
           <Route path="/aboutus" component={AboutUs} />
+          <Route path="/credits" component={Credits} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
           <Route path="/terms" component={Terms} />
