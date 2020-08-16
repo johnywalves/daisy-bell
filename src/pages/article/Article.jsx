@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // components
 import LayoutProduct from "components/layoutProduct/LayoutProduct";
-// actons
+// actions
 import getArticle from "actions/getArticle";
 // style
 import * as S from "./Article.styled";
