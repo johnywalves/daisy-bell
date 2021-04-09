@@ -6,14 +6,16 @@ import Header from "components/header/Header";
 import * as Layout from "styles/Layout.styled";
 
 const LayoutProduct = ({ children, ...rest }) => {
-    return <Layout.Main>
-        <Header {...rest} />
-        {children}
+  return (
+    <Layout.Main>
+      <Header {...rest} />
+      {children}
     </Layout.Main>
-}
+  );
+};
 
 LayoutProduct.propTypes = {
-    children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired,
+};
 
 export default LayoutProduct;

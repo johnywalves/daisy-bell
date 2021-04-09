@@ -9,39 +9,52 @@ import SearchInput from "components/searchInput/SearchInput";
 import * as S from "./Header.styled";
 
 const Header = ({ title }) => {
+  const history = useHistory();
 
-    const history = useHistory();
+  const [search, setSearch] = useState("");
 
-    const [search, setSearch] = useState("");
+  const goTop = useCallback(() => window.scrollTo(0, 0), []);
 
-    const goTop = useCallback(() => window.scrollTo(0, 0), []);
+  const changeSearch = useCallback((e) => setSearch(e.target.value), [
+    setSearch,
+  ]);
 
-    const changeSearch = useCallback(e => setSearch(e.target.value), [setSearch]);
+  const keySearch = useCallback(
+    (e) => {
+      if (e.key === "Escape") {
+        setSearch("");
+      }
+      if (e.key === "Enter") {
+        history.push(`/search/${e.target.value}`);
+      }
+    },
+    [history, setSearch]
+  );
 
-    const keySearch = useCallback(e => {
-        if (e.key === "Escape") {
-            setSearch("");
-        } if (e.key === "Enter") {
-            history.push(`/search/${e.target.value}`);
-        }
-    }, [history, setSearch]);
-
-    return <>
-        <Helmet>
-            <meta charSet="utf-8" />
-            <title>{title ? `${title} ⚬ Daisy Bell` : "Daisy Bell"}</title>
-            <link rel="canonical" href="https://daisy.johnywalves.com.br" />
-        </Helmet>
-        <S.Main>
-            <S.Logo to="/" onClick={goTop}><p>Daisy Bell</p></S.Logo>
-            <SearchInput value={search} onChange={changeSearch} onKeyDown={keySearch} />
-            <AccessUser />
-        </S.Main>
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{title ? `${title} ⚬ Daisy Bell` : "Daisy Bell"}</title>
+        <link rel="canonical" href="https://daisy.johnywalves.com.br" />
+      </Helmet>
+      <S.Main>
+        <S.Logo to="/" onClick={goTop}>
+          <p>Daisy Bell</p>
+        </S.Logo>
+        <SearchInput
+          value={search}
+          onChange={changeSearch}
+          onKeyDown={keySearch}
+        />
+        <AccessUser />
+      </S.Main>
     </>
-}
+  );
+};
 
 Header.propTypes = {
-    title: PropTypes.string,
-}
+  title: PropTypes.string,
+};
 
 export default Header;

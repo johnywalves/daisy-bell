@@ -6,20 +6,22 @@ import InputText from "components/inputText/InputText";
 import Icons from "assets/Icons";
 
 const SearchInput = ({ large, ...rest }) => {
-    return <InputText
-        large={large}
-        icon={<Icons.search />}
-        placeholder="Suco de cevadiss deixa as pessoas mais interessantis"
-        {...rest}
+  return (
+    <InputText
+      large={large}
+      icon={<Icons.Search />}
+      placeholder="Suco de cevadiss deixa as pessoas mais interessantis"
+      {...rest}
     />
-}
+  );
+};
 
 SearchInput.defaultProps = {
-    large: false,
+  large: false,
 };
 
 SearchInput.propTypes = {
-    large: PropTypes.bool,
-}
+  large: PropTypes.bool,
+};
 
 export default SearchInput;

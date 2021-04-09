@@ -12,7 +12,7 @@ import categories from "assets/categories.json";
 const Categories = () => {
   return <LayoutProduct title="Categories">
     <Content title="Categories" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis nisi dui, ut finibus tellus imperdiet eu. Aliquam erat volutpat. Mauris sed congue elit">
-      <S.SearchText large icon={<Icons.search />} />
+      <S.SearchText large icon={<Icons.Search />} />
       <S.Categories>
         {categories.map(c => <Category key={c.name} {...c} />)}
       </S.Categories>

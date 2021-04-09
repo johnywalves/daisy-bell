@@ -10,24 +10,31 @@ import * as S from "./Article.styled";
 const articleClean = { name: "...", content: "..." };
 
 const Article = () => {
+  const { slug } = useParams();
 
-    const { slug } = useParams();
+  const [article, setArticle] = useState(articleClean);
 
-    const [article, setArticle] = useState(articleClean);
+  useEffect(
+    () => (slug ? getArticle(slug, setArticle) : setArticle(articleClean)),
+    [slug, setArticle]
+  );
 
-    useEffect(() => slug ? getArticle(slug, setArticle) : setArticle(articleClean), [slug, setArticle]);
+  const createMarkup = useCallback(
+    (a) => (a.content ? { __html: a.content } : {}),
+    []
+  );
 
-    const createMarkup = useCallback(a => a.content ? { __html: a.content } : {}, []);
-
-    return <LayoutProduct title={article.name}>
-        <S.Article className="right">
-            <S.ArticleText>
-                <h1>{article.name}</h1>
-                <div dangerouslySetInnerHTML={createMarkup(article)} />
-            </S.ArticleText>
-            <S.ArticleFigure src={article.cover} />
-        </S.Article>
+  return (
+    <LayoutProduct title={article.name}>
+      <S.Article className="right">
+        <S.ArticleText>
+          <h1>{article.name}</h1>
+          <div dangerouslySetInnerHTML={createMarkup(article)} />
+        </S.ArticleText>
+        <S.ArticleFigure src={article.cover} />
+      </S.Article>
     </LayoutProduct>
-}
+  );
+};
 
 export default Article;

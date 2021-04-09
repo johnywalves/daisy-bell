@@ -8,38 +8,51 @@ import * as Layout from "styles/Layout.styled";
 import * as S from "./LayoutInstitucional.styled";
 
 const LayoutInstitucional = ({ children }) => {
+  const goTop = useCallback(() => window.scrollTo(0, 0), []);
 
-    const goTop = useCallback(() => window.scrollTo(0, 0), []);
-
-    return <Layout.Main>
-        <S.Wrapper>
-            <Header />
-            {children}
-            <S.Institucional>
-                <S.Column>
-                    <h1>Company</h1>
-                    <Link to="/aboutus"><p>About Us</p></Link>
-                    <Link to="/credits"><p>Credits</p></Link>
-                </S.Column>
-            </S.Institucional>
-        </S.Wrapper>
-        <S.WrapperFooter>
-            <S.Footer>
-                <S.FooterLogo>
-                    <Link to="/" onClick={goTop}><p>Daisy Bell</p></Link>
-                </S.FooterLogo>
-                <S.FooterLegal>
-                    <Link to="/terms"><p>Terms of Use</p></Link>
-                    <Link to="/privacy"><p>Policy Privacy</p></Link>
-                    <Link to="/support"><p>Support</p></Link>
-                </S.FooterLegal>
-            </S.Footer>
-        </S.WrapperFooter>
+  return (
+    <Layout.Main>
+      <S.Wrapper>
+        <Header />
+        {children}
+        <S.Institucional>
+          <S.Column>
+            <h1>Company</h1>
+            <Link to="/aboutus">
+              <p>About Us</p>
+            </Link>
+            <Link to="/credits">
+              <p>Credits</p>
+            </Link>
+          </S.Column>
+        </S.Institucional>
+      </S.Wrapper>
+      <S.WrapperFooter>
+        <S.Footer>
+          <S.FooterLogo>
+            <Link to="/" onClick={goTop}>
+              <p>Daisy Bell</p>
+            </Link>
+          </S.FooterLogo>
+          <S.FooterLegal>
+            <Link to="/terms">
+              <p>Terms of Use</p>
+            </Link>
+            <Link to="/privacy">
+              <p>Policy Privacy</p>
+            </Link>
+            <Link to="/support">
+              <p>Support</p>
+            </Link>
+          </S.FooterLegal>
+        </S.Footer>
+      </S.WrapperFooter>
     </Layout.Main>
-}
+  );
+};
 
 LayoutInstitucional.propTypes = {
-    children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired,
+};
 
 export default LayoutInstitucional;

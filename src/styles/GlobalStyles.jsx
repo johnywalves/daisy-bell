@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -82,6 +82,6 @@ const GlobalStyles = createGlobalStyle`
     strong {
         font-weight: 700;        
     }
-`
+`;
 
 export default GlobalStyles;

@@ -9,17 +9,21 @@ import * as Layout from "styles/Layout.styled";
 import Icons from "assets/Icons";
 
 const Login = () => {
-  return <LayoutProduct>
-    <Badge>
-      <h1>Log In</h1>
-      <p>Morbi ac augue at dui ultrices congue</p>
-      <Layout.FieldTextLogin large icon={<Icons.user />} />
-      <p>Morbi ac augue at dui ultrices congue</p>
-      <Layout.FieldTextLogin large icon={<Icons.key />} />
-      <Layout.FieldButtonLogin>Ultrices</Layout.FieldButtonLogin>
-      <h5>Morbi ac augue at dui <Link to="/signup">Sign Up</Link></h5>
-    </Badge>
-  </LayoutProduct>
-}
+  return (
+    <LayoutProduct>
+      <Badge>
+        <h1>Log In</h1>
+        <p>Morbi ac augue at dui ultrices congue</p>
+        <Layout.FieldTextLogin large icon={<Icons.User />} />
+        <p>Morbi ac augue at dui ultrices congue</p>
+        <Layout.FieldTextLogin large icon={<Icons.Key />} />
+        <Layout.FieldButtonLogin>Ultrices</Layout.FieldButtonLogin>
+        <h5>
+          Morbi ac augue at dui <Link to="/signup">Sign Up</Link>
+        </h5>
+      </Badge>
+    </LayoutProduct>
+  );
+};
 
 export default Login;
