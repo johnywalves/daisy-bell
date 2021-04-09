@@ -3,26 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "7.22.2",
-    "@testing-library/jest-dom": "5.11.3",
-    "@testing-library/react": "10.4.8",
-    "@testing-library/user-event": "12.1.1",
-    "axios": "^0.19.2",
-    "jest-canvas-mock": "^2.2.0",
-    "lottie-web": "5.7.1",
+    "@testing-library/dom": "7.30.3",
+    "@testing-library/jest-dom": "5.11.10",
+    "@testing-library/react": "11.2.6",
+    "@testing-library/user-event": "13.1.1",
+    "axios": "^0.21.1",
+    "jest-canvas-mock": "^2.3.1",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-is": "16.13.1",
-    "react-redux": "7.2.1",
+    "react-redux": "7.2.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
-    "styled-components": "^5.1.1",
-    "styled-media-query": "^2.1.2",
-    "tsutils": "3.17.1"
+    "styled-components": "^5.2.3",
+    "styled-media-query": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "sharp": "^0.25.4"
+    "sharp": "^0.28.1"
   }
 }
